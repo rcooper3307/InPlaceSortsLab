@@ -23,6 +23,7 @@ public class Main {
         }
         System.out.println();
 
+        System.out.println();
         String[] testArr2 = SortUtil.randStringArray(10,5);
         System.out.print("Bubble Sort Before: ");
         for (String num:testArr2)
@@ -41,7 +42,8 @@ public class Main {
             System.out.print(num+" ");
         }
         System.out.println();
-        
+
+        System.out.println();
         double[] testArr3 = SortUtil.randDoubleArray(10);
         System.out.print("Selection Sort Before: ");
         for (double num:testArr3)

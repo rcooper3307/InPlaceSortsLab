@@ -7,7 +7,7 @@ public class Sorts {
         for (int i = 0; i < n-1; i++)
             for (int j = 0; j < n-i-1; j++)
             {
-                if(arr[j].length() < arr[j+1].length())
+                if(arr[j].compareTo(arr[j+1]) > 0)
                 {
                     SortUtil.stringSwap(arr,j+1, j);
                 }
@@ -15,6 +15,7 @@ public class Sorts {
     }
     public static void selectionSort(double[] arr)
     {
+
         for(int i = 0; i < arr.length; i++)
         {
             SortUtil.doubleSwap(arr, i,(SortUtil.minimum(arr, i)));
@@ -22,6 +23,7 @@ public class Sorts {
     }
     public static void insertionSort(int[] arr)
     {
+        while(!(SortUtil.isSorted(arr)))
         //loop through the entire array, use an index i
         for(int i = 0; i < arr.length; i++)
         {

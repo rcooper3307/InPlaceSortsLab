@@ -60,6 +60,17 @@ public class SortUtil {
     }
     public static boolean isSorted(int[]arr)
     {
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] > arr[i+1])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isDoubleSorted(double[]arr)
+    {
         for(int i = 0; i < (arr.length-1); i++)
         {
             if(arr[i] > arr[i+1])
@@ -75,11 +86,11 @@ public class SortUtil {
         int afterSum = 0;
         for(int i = 0; i < before.length; i++)
         {
-            before[i] += beforeSum;
+            beforeSum = beforeSum + before[i];
         }
         for(int i = 0; i < after.length; i++)
         {
-            after[i] += afterSum;
+            afterSum = afterSum + after[i];
         }
         if(beforeSum != afterSum)
         {
@@ -102,6 +113,16 @@ public class SortUtil {
     public static int[] copyIntArray(int[]arr)
     {
         int[] temp = new int[arr.length];
+        for(int i = 0; i < arr.length; i++)
+        {
+            temp[i] = arr[i];
+        }
+        return temp;
+    }
+
+    public static double[] copyDoubleArray(double[]arr)
+    {
+        double[] temp = new double[arr.length];
         for(int i = 0; i < arr.length; i++)
         {
             temp[i] = arr[i];
