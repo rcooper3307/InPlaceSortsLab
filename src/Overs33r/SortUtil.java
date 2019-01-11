@@ -1,9 +1,16 @@
-package com.company;
+package Overs33r;
 
 public class SortUtil {
     public static void swap(int[]arr, int x, int y)
     {
         int temp;
+        temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
+    }
+    public static void stringSwap(String[]arr, int x, int y)
+    {
+        String temp;
         temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;
@@ -24,7 +31,25 @@ public class SortUtil {
         }
         return arr;
     }
-    public static int[] randDoubleArray(int count)
+    public static String[] randStringArray(int num, int length)
+    {
+        String [] arr = new String [num];
+        while (num > 0)
+        {
+            int i = 0;
+            String s = "";
+            while (i < length)
+            {
+                char c = (char)((Math.random()*26)+97);
+                s = s + c;
+                i++;
+            }
+            num--;
+            arr[num] = s;
+        }
+        return arr;
+    }
+    public static double[] randDoubleArray(int count)
     {
         double arr[] = new double[count];
         for(int i = 0; i < count; i++)
@@ -73,5 +98,14 @@ public class SortUtil {
             }
         }
         return minInd;
+    }
+    public static int[] copyIntArray(int[]arr)
+    {
+        int[] temp = new int[arr.length];
+        for(int i = 0; i < arr.length; i++)
+        {
+            temp[i] = arr[i];
+        }
+        return temp;
     }
 }
